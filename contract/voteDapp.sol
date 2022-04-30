@@ -49,12 +49,12 @@ contract voteDapp {
             delegate_.weight += sender.weight;
         }
     }
-    function voting(uint Proposal) public {
+    function voting(uint Pro) public {
         Voter storage sender = voters[msg.sender];
         require(sender.weight != 0, "has no right to vote");
         sender.voted = true;
-        sender.vote = Proposal;
-        proposals[Proposal].voteCount += sender.weight;
+        sender.vote = Pro;
+        proposals[Pro].voteCount += sender.weight;
     }
     function winingProposal () public view returns(uint winningProposal_) {
         uint winingVoteCount = 0;
