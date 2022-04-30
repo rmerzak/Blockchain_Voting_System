@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <title></title>
+</head>
+<body class="container">
+    <h1>voting Dapp in Solidity and Ether.Js</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <th>Candidate</th>
+                <th>Votes</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="candidate0name"></td>
+                    <td id="candidate0"></td>
+                </tr>
+                <tr>
+                    <td id="candidate1name"></td>
+                    <td id="candidate1"></td>
+                </tr>
+                <tr>
+                    <td id="candidate2name"></td>
+                    <td id="candidate2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <select id="select1">
+        <option title="--Select a a candidate to vote" value="-1"></option>
+    </select>
+    <input id="Button1" type="button" class="btn btn-info" value="Vote"/>
+    Or Delegate someone to vote
+    <input id="Button1" type="button" class="btn btn-info" value="Delegate"/>
+</body>
+</html>
