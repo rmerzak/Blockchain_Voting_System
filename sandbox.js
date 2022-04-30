@@ -144,7 +144,7 @@ var abi = [
     type: "function",
   },
 ];
-const address = "0xCEa5d121BF9515843F387e633877b5107354F016"
+const address = "0x08F8646B528C3Ec83Af4f41EAFf2c1dE19e85990"
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 provider.send("eth_requestAccounts", []);
 const contract = new ethers.Contract(
@@ -156,9 +156,9 @@ const contract = new ethers.Contract(
 const vote = async() => {
     const signer = provider.getSigner(0);
     const contra = new ethers.Contract(address,abi,signer)
-    const proposalval = document.getElementById("select1").value;
+    var proposalval = document.getElementById('select1').value;
     console.log(proposalval);
-    const ret = await contra.voting(0);
+    const ret = await contra.voting(proposalval);
 
 }
 
@@ -181,4 +181,4 @@ const main = async () => {
 };
 
 main();
-vote();
+vote()

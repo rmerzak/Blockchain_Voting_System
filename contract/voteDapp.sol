@@ -51,7 +51,7 @@ contract voteDapp {
     }
     function voting(uint Pro) public {
         Voter storage sender = voters[msg.sender];
-        require(sender.weight != 0, "has no right to vote");
+        require(!sender.voted, "has no right to vote");
         sender.voted = true;
         sender.vote = Pro;
         proposals[Pro].voteCount += sender.weight;
